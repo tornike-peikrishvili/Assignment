@@ -1,0 +1,175 @@
+.posts-container {
+  margin-top: 3rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.posts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.post-card {
+  flex: 0 0 calc(33.333% - 30px);
+  margin: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.post-image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover .post-image {
+  transform: scale(1.05);
+}
+
+.post-tag {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: red;
+  font-weight: bold;
+}
+
+.post-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.post-meta {
+  display: flex;
+  color: #888;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.post-author {
+  color: black;
+  font-weight: bold;
+}
+
+.post-date {
+  margin-left: 0.3rem;
+}
+
+.post-views {
+  margin-left: 0.3rem;
+}
+
+.post-description {
+  color: #666;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.no-posts {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0;
+  color: #888;
+  font-size: 1.125rem;
+}
+
+/* popup styles */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+}
+
+.popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.popup-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.popup-meta {
+  display: flex;
+  color: #888;
+  margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.popup-date {
+  margin-right: 1rem;
+}
+
+.popup-image-container {
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.popup-image {
+  width: 100%;
+  display: block;
+}
+
+.popup-description {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .post-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .post-card {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .popup-content {
+    padding: 1.5rem;
+  }
+
+  .popup-title {
+    font-size: 1.5rem;
+  }
+}
